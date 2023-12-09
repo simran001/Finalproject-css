@@ -1,0 +1,706 @@
+@font-face {
+    font-family: 'Handmade';
+    src: url(../fonts/Handmade.otf);
+}
+@font-face {
+    font-family: 'Crafty.';
+    src: url(../fonts/crafty.otf);
+}
+@font-face {
+    font-family:"Regular" ;
+    src: url(../fonts/Textile\ Regular.ttf);
+}
+@font-face {
+    font-family:'Smile' ;
+    src: url(../fonts/The\ Smile.otf);
+}
+/* Apply smooth scrolling to the entire HTML document */
+html{
+    scroll-behavior: smooth;
+}
+/* Reset margin and padding for certain elements */
+body, h1, h2, p, ul {
+    margin: 0;
+    padding: 0;
+}
+
+/* Apply a basic style to the body */
+body {
+    font-family: 'Arial', sans-serif;
+    
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #535878;
+    color: #fee1dd;
+    padding: 0.75em;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    flex-wrap: wrap;
+}
+
+.header div {
+    display: flex;
+    align-items: center;
+    line-height: 3em;
+}
+
+.header img {
+    width: 35%;
+    height: 100%;
+    clip-path: circle(48%);
+    margin-right: 2em;
+}
+
+.header h1 {
+    font-family: 'Smile';
+    margin: 0;
+    font-size: 3em;
+    letter-spacing: .1em;
+}
+.header h1 span{
+    font-size: .35em;
+    letter-spacing: .15em;
+}
+
+/* Additional styling for the child element of the header */
+
+.header div:nth-child(2){
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 2px;
+}
+/* styling the nav bar */
+nav ul {
+    list-style-type: none;
+    margin: .5em;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+nav li {
+    padding: 0.5em;
+    border-right: solid;
+}
+nav li:last-of-type{
+    border: none;
+}
+nav a {
+    font-family: 'regular';
+    text-decoration: none;
+    color: #fee1dd;
+    /* font-weight: bold; */
+    font-size: 1.5em;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #cea0aa;
+}
+
+
+.search-bar input {
+    padding: 8px;
+    width: 20em;
+    font-family: 'Courier New', Courier, monospace;
+    border: 1px solid #ccc;
+    border-radius: 1.5em;
+}
+/* Video masthead styling */
+.video-masthead {
+    height: 75vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: 0.25em 0;
+    filter: grayscale(26%);
+}
+
+#background-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.video-masthead h1 { /* Styling for the heading in the video masthead */
+    font-size: 2.5em;
+    font-family: 'Handmade';
+    text-shadow: 0px 5px 4px rgba(0, 0, 0, 0.5);
+    color: #fee1dd;
+    text-align: center;
+    width: 100%;
+    z-index: 1;
+    letter-spacing: 2px;
+}
+
+  
+.gradient {
+    background: linear-gradient(45deg,#535878, #feb47b); /* Adjust gradient colors as needed */
+    color: #fff; /* Text color for better contrast */
+    padding: 40px;
+    text-align: justify;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+}
+
+/* Styles for heading and paragraphs in the gradient section */
+.gradient h2 {
+    font-size: 2.5em; /* Adjust the font size */
+    font-family: 'Regular';
+    margin-bottom: 20px; /* Adjust spacing between heading and paragraphs */
+}
+
+.gradient p {
+    font-family: 'crafty';
+    line-height: 1.6; /* Adjust the line height for better readability */
+    margin-bottom: 1.25em; /* Adjust spacing between paragraphs */
+}
+
+/* Styles for the mains section */
+.mains{
+    background-color: #fee1dd;
+    padding: 0.55em;
+    margin: .25em .5em;
+    clip-path: polygon( 0 0,100% 0, 100% 100%, 0 90%);
+}
+.mains h3{
+    font-family:"Handmade";
+    font-size: 1.5em;
+    letter-spacing: .12em;
+}
+.mains span{
+    font-size: .35em;
+}
+.images {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 20px 0;
+    padding: 10px;
+}
+
+.images div {
+    display: grid;
+    justify-content: center;
+    margin: 10px;
+    position: relative;
+}
+
+.images img {
+    width: 100%;
+    height: 100%;
+    clip-path: circle(50%);
+    transition: opacity 0.3s ease; /* Adding a transition for opacity */
+}
+
+.images div:hover img {
+    opacity: 0.7; /* Change the opacity on hover */
+    transform: scale(1.15);
+}
+
+/* Styles for text over images in the mains section */
+.images p {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #cea0aa; /* Background color with opacity */
+    color: #fff;
+    padding: 5px;
+    opacity: 0; 
+    border-radius: 0.8em;
+    transition: opacity 0.3s ease; 
+}
+
+.images div:hover p {
+    opacity: 1; 
+}
+
+/* Styles for the more section */
+.more{
+    height: 50vh;
+    background-image: url(../img/bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    clip-path: polygon(0% 100%, 100% 100%, 100% 10%, 0 0);
+
+}
+
+.more h2{ /* Header styling within the "more" section */
+    font-family: 'Regular';
+    color: #4e1e4e;
+    font-size: 3em;
+}
+.more div{ /* Centering content within the "more" section */
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+#button{  /* Styling for a button with an SVG element */
+    width: 20%;
+    height: 6vh;
+    background-color: #4e1e4e;
+    font-size: 1.5em;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer; 
+}
+#button svg {   /* Styling for SVG within the button */
+    position: relative;
+    left: -6px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 108%;
+    height: 103%;
+    fill: white;
+}
+#button rect{ /* Styling for animated rectangular border in the button */
+
+    fill: none;
+    stroke: white;
+    stroke-width: 2;
+    stroke-dasharray: 300, 0;
+    transition: all 0.35s linear;
+}
+
+#button:hover rect{
+    stroke-width: 4;
+    stroke-dasharray: 10, 360;
+    stroke-dashoffset: 30;
+}
+.cta {
+    padding: 40px 20px;
+    background: linear-gradient(45deg, #feb47b91, #4e1e4e);
+    margin-top: 1.5em;
+  }
+  .cta h2{
+    font-family: 'handmade';
+    font-size: 2em;
+    color: #4e1e4e;
+  }
+  .cta p{
+    font-family: 'Regular';
+    font-size: .85em;
+    color: #4e1e4e;
+  }
+  /* Content and Terms of Service section styling */
+.content,.tos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 800px; /* Adjust the maximum width of the content */
+    text-align: justify;
+    margin: 0 auto;
+    padding: 20px;
+}
+/* Heading styling with hover effect */
+.content h3, .tos h3 {
+    color: #333;
+    font-size: 2em;
+    margin-bottom: 10px;
+    transition: font-size 0.3s ease; 
+}
+.content h3:hover{ /* Hover effect on heading */
+    font-size: 3em;
+    letter-spacing: .25em;
+}
+
+.content p { /* Styling for paragraphs in the content section */
+    color: #555;
+    line-height: 1.5;
+    letter-spacing:.12em;
+}
+ /* Background section styling with fade-in animation */
+ .background-section {
+    max-width: 800px;
+    height: 60vh;
+    display: flex;
+    background-image: url(../img/bg3.png);
+    color: #0e0e0e;
+    background-position: 0px 65%;
+    background-size: cover;
+    padding: 0;
+    background-repeat: no-repeat;
+    margin:auto;
+    opacity: 0; /*initial value for opacity*/ 
+    animation: fadeIn 2s ease-in-out forwards; /* Adding the animation property */
+}
+/* Keyframes for the fade-in effect */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.background-section::after {
+    content: "";
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.background-section div {
+    text-align: left; 
+    color: #2d1a2d;
+    padding: 5%;
+}
+.background-section h3{
+    font-size: 1.75em;
+    font-family: 'Regular';
+}
+.background-section p{
+    font-family: 'Regular';
+    font-size: 1.25em;
+}
+/* Style for the "Terms of Service" section */
+.tos {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.tos h3 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.tos p {
+    color: #555;
+    line-height: 2;
+}
+  /* Style for the content inside cta */
+  .content3 {
+    max-width: 1000px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: auto;
+}
+  /* Style for the form */
+  #contactform1 {
+    width: 60%;
+    padding: 1em;
+  }
+  
+  #contactform1 label {
+    font-family: 'Regular';
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #4e1e4e;
+  }
+  
+  #contactform1 input,
+  #contactform1 textarea {
+    background-color: #f6fbff99;
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  #contactform1 button {
+    background-color:#4e1e4e;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  #contactform1 button:hover {
+    background-color:#fee1dd;
+    color: #4e1e4e;
+  }
+  .content3 div{
+    width: 100%;
+    height: 50vh;
+  }
+  /* Style for the image */
+  .content3 img {
+    width: 100%;
+    height:100%;
+    box-shadow: 4px 7px 4px rgba(0, 0, 0, 0.5);
+  }
+  .ppage {
+    text-align: center;
+}
+
+.container1,.container2, .container3, .container4 {
+    width: 100%;
+    height: 100%;
+    background-color: #fee1dd;
+    margin: 1em 0;
+    padding: 0.15em 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.container2, .container4{
+    background-color: #b8d8e3;
+}
+.ppage h2 {
+    margin: 10px 0;
+    font-family: 'Handmade', sans-serif;
+    font-size: 1.5em;
+    letter-spacing: 4px;
+    color: #04207e;
+    width: 100%;
+}
+
+.crochet-items-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap; /* Prevent wrapping to the next line */
+    
+}
+/* Candy item styling */
+
+.crochet-item img {
+    max-width: 100%;
+    height: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    clip-path: circle( 50%);
+}
+
+.crochet-item:hover img {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    filter: grayscale(50%); 
+    opacity: 0.9;
+    transform: scale(1.05);
+}
+
+.crochet-item h3 {
+    font-family: 'Smile';
+    font-size: 1.5em;
+    color:#04207e;
+}
+
+.crochet-item p {
+    margin:0.5em;
+    color:#2d1a2d;
+}
+.crochet-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 10px;
+    width: 200px;
+    margin: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.crochet-item:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.crochet-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+.add-to-cart {
+    background-color: #cea0aa;
+    border: none;
+    color: #2d1a2d;
+    padding: 0.55em;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1em;
+    cursor: pointer;
+    position: relative;
+}
+.add-to-cart svg {
+    position: absolute;
+    left: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 101%;
+    height: 100%;
+    fill: white;
+    margin-right: 5px;
+}
+.add-to-cart rect{
+    fill: none;
+    stroke: #2d1a2d;
+    stroke-width: 2;
+    stroke-dasharray: 300, 0;
+    transition: all 0.35s linear;
+}
+/* Hover effect for the add-to-cart button */
+
+.add-to-cart:hover rect{
+    stroke-width: 4;
+    stroke-dasharray: 10, 360;
+    stroke-dashoffset: 30;
+}
+ 
+.content2{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(321deg, #2c0a2c9e, #fee1ddab);
+}
+.content2 div{
+    width: 100%;
+    height: 100%;
+}
+.content2 h4{
+    font-family: 'Regular';
+    font-size: 1.35em;
+    color: #4e1e4e;
+}
+.content2 p{
+    font-family: 'Regular';
+    color: #4e1e4e;
+}
+
+.content2 img{
+    width: 100%;
+    height: 100%;
+}
+#contact-info,#contact-form ,.content2{
+    max-width: 800px;
+    margin:1% auto;
+    padding: 20px;
+    background-color: #ffffff63;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#contact-info h2, #contact-form h2 {
+    font-family: 'montserrat',sans-serif;
+    border-bottom: 2px solid #333;
+    padding-bottom: 5px;
+    color:#4e1e4e;
+}
+
+#contact-info p {
+    font-family: 'Montserrat',sans-serif;
+    color: #4e1e4e;
+    font-size: 1.25em;
+    line-height: 1.6;
+    margin: 0.35em;
+}
+
+#contact-form label {
+    display: block;
+    font-size: 1.25em;
+    font-family: 'Montserrat';
+    margin: 0.35em;
+    color: #4e1e4e;
+}
+
+#contact-form input,
+#contact-form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+#contact-form button {
+    background-color: #4e1e4e;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: .85em;
+    cursor: pointer;
+}
+
+#contact-form button:hover {
+    background-color: #555;
+}
+
+/* Pagination styling */
+.pagination{
+    padding: 5%;
+  
+  }
+.pagination-container{
+    text-align: center;
+  }
+  .pagination-container a{
+    font-size: 1.5em;
+    color:#4e1e4e;
+    padding: 15px;
+    border-bottom: 4px solid rgb(157, 176, 206);
+    transition: all 0.25s ease-in-out 0s;
+    text-decoration: none
+  }
+  
+  .pagination-container a:hover{  /* Hover effect on pagination links */
+    outline: solid 4px #9db0ce;
+    border-bottom: solid 0px #9db0ce;
+  }
+
+
+
+.footer {
+    background-color: #535878;
+    color: #fee1dd;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 2em 0;
+    display: flex;
+   
+  }
+   
+  /* Styles for footer heading level 4 */
+  .footer h4 {
+    font-size: 1.5em;
+    margin-bottom: 1em;
+    font-family: 'montserrat', sans-serif;
+
+  }
+  /* Styles for footer paragraphs */
+  .footer p {
+    font-size: .85em;
+    margin: 1em;
+    font-family: 'montserrat', sans-serif;
+    color: #fee1dd;
+  }
+  
+  .footer p:hover{
+    text-decoration: underline white;
+    font-weight: bold;
+  }
+      
+  .footer-social img {
+    height: 100%;
+    width: 100%;
+    clip-path: circle(48%);
+  }
+
+
